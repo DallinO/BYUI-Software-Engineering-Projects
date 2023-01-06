@@ -1,0 +1,40 @@
+def sum_the_digits(number):                                     
+    print(f"#1 number: {number}")                               # 01
+    if number == 0:
+        print(f"#2 number: {number}")                           # 02
+        return 0
+    else:                                                       
+        output = number % 10 + sum_the_digits(number // 10)     
+        print(f"#3 return: {output}")                           # 03
+        return output                                           
+
+print("**************")
+sum_the_digits(13)
+print("**************")
+sum_the_digits(521)
+
+def fibonacci(number):
+
+    n1, n2 = 0, 1
+    count = 0
+
+    while count < number:
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
+    
+    return n1
+
+output = fibonacci(8)
+#print(output)
+
+
+def getSum(number):
+    
+    sum = 0
+    for digit in str(number): 
+        sum += int(digit)      
+    return sum
+   
+#print(getSum(n))

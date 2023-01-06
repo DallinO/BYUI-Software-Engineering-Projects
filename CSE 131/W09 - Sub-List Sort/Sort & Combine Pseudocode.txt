@@ -1,0 +1,44 @@
+01	def sort(array)
+02		size <- len(array)
+03    	source <- array
+04   		destination <- [None] * size
+05  		iteration <- 2
+06
+07    	WHILE iteration > 1
+08        		iteration <- 0
+09        		begin1 <- 0
+10        		WHILE begin1 < size
+11            		end1 <- begin1 + 1
+12            		WHILE end1 < size and source[end1 - 1] <= source[end1]
+13                		end1 +=1
+14
+15            		begin2 <- end1
+16
+17            		IF begin2 < size
+18                		end2 <- begin2 + 1
+19           		ELSE
+20                		end2 <- begin2
+21            		WHILE end2 < size and source[end2 - 1] <= source[end2]
+22                		end2 += 1
+23
+24            		iteration += 1
+25            		combine(source, destination, begin1, begin2, end2)
+26            		begin1 <- end2
+27        		source, destination <- destination, source
+28  		RETURN source
+29	END
+30
+31	def combine(source, destination, begin1, begin2, end2)
+32    	end1 <- begin2
+33
+34    	FOR i in range(begin1, end2)
+35        		IF (begin1 < end1) and (begin2 == end2 
+				or source[begin1] < source[begin2])
+
+36          		destination[i] <- source[begin1]
+37            		begin1 += 1
+38        		ELSE
+39            		destination[i] <- source[begin2]
+40           		begin2 += 1
+41  		RETURN
+	END

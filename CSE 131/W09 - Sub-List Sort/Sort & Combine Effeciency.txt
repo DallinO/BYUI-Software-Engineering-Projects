@@ -1,0 +1,44 @@
+	def sort(array)
+O(1)		size <- len(array)
+O(1)    	source <- array
+O(1)   	destination <- [None] * size
+O(1)  	iteration <- 2
+
+O(log*n)   	WHILE iteration > 1
+O(1)        	iteration <- 0
+O(1)        	begin1 <- 0
+O(log*n)    	WHILE begin1 < size
+O(1)            		end1 <- begin1 + 1
+O(log*n)         		WHILE end1 < size and source[end1 - 1] <= source[end1]
+O(1)                		end1 +=1
+
+O(1)            		begin2 <- end1
+
+O(1)            		IF begin2 < size
+O(1)                		end2 <- begin2 + 1
+O(1)         		ELSE
+O(1)              		end2 <- begin2
+O(log*n          		WHILE end2 < size and source[end2 - 1] <= source[end2]
+O(1)			           	end2 += 1
+
+O(1)            		iteration += 1
+O(1)            		combine(source, destination, begin1, begin2, end2)
+O(1)            		begin1 <- end2
+O(1)       		source, destination <- destination, source
+O(1) 		RETURN source
+	END
+
+	def combine(source, destination, begin1, begin2, end2)
+O(1)    	end1 <- begin2
+
+O(n)    	FOR i in range(begin1, end2)
+O(1)       		IF (begin1 < end1) and (begin2 == end2 
+				or source[begin1] < source[begin2])
+
+O(1)            		destination[i] <- source[begin1]
+O(1)          		begin1 += 1
+O(1)      		ELSE
+O(1)          		destination[i] <- source[begin2]
+O(1)         		begin2 += 1
+O(1)		RETURN
+	END
