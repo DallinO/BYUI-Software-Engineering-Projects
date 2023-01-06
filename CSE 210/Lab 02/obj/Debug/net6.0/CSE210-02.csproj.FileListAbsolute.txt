@@ -1,0 +1,15 @@
+C:\Users\offic\Documents\CSE 210\CSE210-02\bin\Debug\net6.0\CSE210-02.exe
+C:\Users\offic\Documents\CSE 210\CSE210-02\bin\Debug\net6.0\CSE210-02.deps.json
+C:\Users\offic\Documents\CSE 210\CSE210-02\bin\Debug\net6.0\CSE210-02.runtimeconfig.json
+C:\Users\offic\Documents\CSE 210\CSE210-02\bin\Debug\net6.0\CSE210-02.dll
+C:\Users\offic\Documents\CSE 210\CSE210-02\bin\Debug\net6.0\CSE210-02.pdb
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\CSE210-02.csproj.AssemblyReference.cache
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\CSE210-02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\CSE210-02.AssemblyInfoInputs.cache
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\CSE210-02.AssemblyInfo.cs
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\CSE210-02.csproj.CoreCompileInputs.cache
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\CSE210-02.dll
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\refint\CSE210-02.dll
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\CSE210-02.pdb
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\CSE210-02.genruntimeconfig.cache
+C:\Users\offic\Documents\CSE 210\CSE210-02\obj\Debug\net6.0\ref\CSE210-02.dll
