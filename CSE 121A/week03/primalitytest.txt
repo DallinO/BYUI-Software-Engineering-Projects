@@ -1,0 +1,60 @@
+Fermats Theorem:
+
+If n is a prime number, then for every a, 1 < a < n-1,
+an-1 ≡ 1 (mod n)
+OR 
+an-1 % n = 1 
+
+<script>
+
+
+function power( a, n, p)
+{
+	
+	let res = 1;
+	a = a % p;
+	
+	while (n > 0)
+	{
+		// If n is odd, multiply 'a' with result
+		if ((n & 1) == 1)
+			res = (res * a) % p;
+	
+		// n must be even now
+		n = n >> 1; // n = n/2
+		a = (a * a) % p;
+	}
+	return res;
+}
+
+function isPrime( n, k)
+{
+if (n <= 1 || n == 4) return false;
+if (n <= 3) return true;
+while (k > 0)
+{
+	// Pick a random number in [2..n-2]
+	// Above corner cases make sure that n > 4
+	let a = Math.floor(Math.random()* (n-1 - 2) + 2);
+	
+	// Fermat's little theorem
+	if (power(a, n - 1, n) != 1)
+		return false;
+	
+	k--;
+	}
+	
+	return true;
+}
+
+let k = 3;
+if(isPrime(11, k))
+	document.write(" true" + "</br>");
+else
+	document.write(" false"+ "</br>");
+if(isPrime(15, k))
+	document.write(" true"+ "</br>");
+else
+	document.write(" false"+ "</br>");
+
+</script>
