@@ -1,0 +1,11 @@
+c:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 310\Module #1\rust-hello\target\debug\deps\gif-4264084cd0b55648.rmeta: C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\lib.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\traits.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\common.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\reader\mod.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\reader\decoder.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\encoder.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\../README.md
+
+c:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 310\Module #1\rust-hello\target\debug\deps\gif-4264084cd0b55648.d: C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\lib.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\traits.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\common.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\reader\mod.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\reader\decoder.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\encoder.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\../README.md
+
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\lib.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\traits.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\common.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\reader\mod.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\reader\decoder.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\encoder.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\gif-0.11.4\src\../README.md:

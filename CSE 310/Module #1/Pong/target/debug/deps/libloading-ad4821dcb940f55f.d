@@ -1,0 +1,10 @@
+c:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 310\Module #1\rust-hello\target\debug\deps\libloading-ad4821dcb940f55f.rmeta: C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\lib.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\os\mod.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\os\windows\mod.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\changelog.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\util.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\error.rs
+
+c:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 310\Module #1\rust-hello\target\debug\deps\libloading-ad4821dcb940f55f.d: C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\lib.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\os\mod.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\os\windows\mod.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\changelog.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\util.rs C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\error.rs
+
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\lib.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\os\mod.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\os\windows\mod.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\changelog.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\util.rs:
+C:\Users\offic\.cargo\registry\src\github.com-1ecc6299db9ec823\libloading-0.6.7\src\error.rs:

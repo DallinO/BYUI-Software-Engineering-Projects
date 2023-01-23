@@ -1,0 +1,18 @@
+TEST CASES
+
+NAME			INPUT										OUTPUT
+----------------------------------------------------------------------------------------------------------
+Hit Ground		iLZ = [20, 21, 22, 23] position = (0, 18)				0.0 "Target Missed!"
+On Platform		iLZ = [20, 21, 22, 23] position = (0, 20)				0.0 "The Eagle Has Landed!"
+Top Bound		iLZ = [20, 21, 22, 23] position = (3, 50)				27.0 (Lander is off screen)
+Right Bound		iLZ = [20, 21, 22, 23] position = (100, 30)			7.0 (Lander is off screen)
+Left Bound		iLZ = [20, 21, 22, 23] position = (-1, 30)			7.0 (lander is off screen)
+Upside-Down		iLZ = [20, 21, 22, 23] position = (0, 20) angle = -180	0.0 "You Crashed!"
+Too Fast		iLZ = [20, 21, 22, 23] position = (0, 20) speed = 5 m/s	0.0 "Too Fast, You Crashed!"
+Out Of Fuel		iLZ = [20, 21, 22, 23] position = (1, 25) fuel = 0		0.0 "Out of Fuel!
+
+
+
+
+
+

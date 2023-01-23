@@ -1,0 +1,79 @@
+CLASS Program
+
+	PUBLIC
+
+	ptLM
+	ptUpperRight
+	interface
+	lunarSurface
+	ptStar
+	pilotControl
+	lm
+	gout
+
+	angle
+	
+
+	VOID initialize()
+		WHILE( lm.getPosition() != lunarSurface.platformPosition )
+		
+			IF pilotControl.isUp()
+				ptLM.addY( -1.0 )
+			IF pilotControl.isDown()
+				ptLM.addY( 1.0 )
+			IF pilotControl.isLeft()
+				angle += 0.1
+			IF pilotControl.isRight()
+				angle -= 0.1
+
+			ground.draw( gout )
+			gout.drawLander( ptLM, angle)
+  			gout.drawLanderFlames( ptLM, angle, isDown(), isLeft(), isRight())
+
+  
+   			gout.setPosition( Point( 30.0, 30.0 ))
+   			PUT "Fuel 		( lm.burnFuel() ): 
+			     Altittude: 	( lm.getAltitude() )
+			     Speed:"	( lm.getSpeed() )
+   			gout.drawStar( ptStar, phase)
+	END
+END
+
+CLASS LM
+
+	PRIVATE
+
+	fuel
+	speed
+	positionDifference
+	
+	GRAVITY
+	LANDER_WIDTH
+
+	PUBLIC
+	
+	VOID resetFuel()
+		fuel = 5000
+	END
+	VOID burnFuel()
+		fuel - 10
+	END
+	VOID burnRotateFuel()
+		fuel - 1
+	END
+	DOUBLE getSpeed()
+		return speed
+	END
+
+	PRIVATE
+
+	VOID updateSpeed()
+		previousPos = positionDifference[1]
+		currentPos = positionDifference[0]
+		y1 = previousPos.getY()
+		y2 = prev	
+		
+		speed = sqrt[(currentPos.getY() - previousPos.getY()) ** 2 + 
+			(currentPos.getX() - previousPos.getX()) **2]
+	END
+END

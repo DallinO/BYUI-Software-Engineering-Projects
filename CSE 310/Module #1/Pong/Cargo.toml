@@ -1,0 +1,14 @@
+[package]
+name = "rust-hello"
+version = "0.1.0"
+edition = "2021"
+
+[package]
+name = "amethyst-pong"
+version = "0.1.0"
+authors = ['Kiffin Gish']
+edition = "2018"
+
+[dependencies.amethyst]
+version = "0.13"
+features = ["vulkan"]
