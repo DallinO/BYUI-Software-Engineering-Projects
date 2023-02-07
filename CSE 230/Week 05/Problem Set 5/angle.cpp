@@ -2,15 +2,14 @@
 * 1. Name:
 *      John Morton, Dallin Olson
 * 2. Assignment Name:
-*      Practice 03: Angle Class
+*      Practice 05: C++ Methods
 * 3. Assignment Description:
-*      Create an angle class containing methods that convert between radians
-*	   and degrees.
+*      Create a header and source file for the Angle class. Create a seperate
+*	   file for testing the class. Add constructors to the Angle class.
 * 4. What was the hardest part? Be as specific as possible.
-*	   The hardest part was setting the correct statements for the while loops
-*	   for the normalize method.
+*	   The assignment was simple and we did not run into any issues.
 * 5. How long did it take for you to complete the assignment?
-*	   2 Hours
+*	   1 Hours
 ******************************************************************************/
 
 #define _USE_MATH_DEFINES

@@ -1,1 +1,2 @@
 C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 230\Week 02\W02 Problem Set\x64\Debug\W02 Problem Set.exe
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 230\Week 02\Lab\x64\Debug\W02 Problem Set.exe

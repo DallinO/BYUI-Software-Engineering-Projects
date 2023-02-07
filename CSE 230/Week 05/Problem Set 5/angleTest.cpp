@@ -64,6 +64,13 @@ void testCases(Angle angleClass) {
 *************************/
 int main() {
 
-	Angle angleClass;
-	testCases(angleClass);
+	Angle angle1;
+	Angle angle2(90);
+	Angle angle3(angle1);
+	cout << "Angle1" << endl;
+	testCases(angle1);
+	cout << "Angle2" << endl;
+	testCases(angle2);
+	cout << "Angle3" << endl;
+	testCases(angle3);
 }
