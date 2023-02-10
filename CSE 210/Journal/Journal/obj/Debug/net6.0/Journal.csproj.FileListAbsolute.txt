@@ -1,0 +1,15 @@
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\Journal.csproj.AssemblyReference.cache
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\Journal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\Journal.AssemblyInfoInputs.cache
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\Journal.AssemblyInfo.cs
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\Journal.csproj.CoreCompileInputs.cache
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\bin\Debug\net6.0\Journal.exe
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\bin\Debug\net6.0\Journal.deps.json
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\bin\Debug\net6.0\Journal.runtimeconfig.json
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\bin\Debug\net6.0\Journal.dll
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\bin\Debug\net6.0\Journal.pdb
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\Journal.dll
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\refint\Journal.dll
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\Journal.pdb
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\Journal.genruntimeconfig.cache
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 210\Journal\Journal\obj\Debug\net6.0\ref\Journal.dll
