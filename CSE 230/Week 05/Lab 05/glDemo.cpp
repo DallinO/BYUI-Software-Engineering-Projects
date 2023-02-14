@@ -8,7 +8,10 @@
 #include "uiInteract.h"
 #include "uiDraw.h"
 #include "ground.h"
-#include "lm.h"
+#include "lander.h"
+#include "velocity.h"
+#include "acceleration.h"
+
 
 #define LM_WIDTH	20.0
 
@@ -30,17 +33,21 @@ public:
        for (int x = 0; x < 50; x++) {
            Point star(random(0, 400), random(0, 400));
            ptStar[x] = star;
+           phase[x] = random(0, 255);
        }
    }
 
    // this is just for test purposes.  Don't make member variables public!        
    Point ptUpperRight;   // size of the screen
    double angle;         // angle the LM is pointing
-   unsigned char phase;  // phase of the star's blinking
+   unsigned char phase[50];  // phase of the star's blinking
    Ground ground;
    Point ptStar[50];
-   LM lm;
+   Lander lm;
+   //Velocity vel;
+   //Acceleration accel;
    bool x = true;
+   int frame = 0;
    
 };
 
@@ -59,58 +66,63 @@ void callBack(const Interface *pUI, void * p)
    // is the first step of every single callback function in OpenGL. 
    Demo * pDemo = (Demo *)p;  
 
-   // draw our little star
-   for (int x = 0; x < 50; x++) {
-       pDemo->phase = random(0, 255);
-       gout.drawStar(pDemo->ptStar[x], pDemo->phase++);
-   }
 
-   if (pDemo->x == true)
-   {
-       // move the ship around
-       if (pUI->isLeft()) {
-           pDemo->lm.angle += 0.1;
-           pDemo->lm.burnRotateFuel();
-       }
-       if (pUI->isRight()) {
-           pDemo->lm.angle -= 0.1;
-           pDemo->lm.burnRotateFuel();
-       }
-       if (pUI->isUp()) {
-           pDemo->lm.applyThrust();
+
+       // draw our little star
+       for (int x = 0; x < 50; x++) {
+           gout.drawStar(pDemo->ptStar[x], pDemo->phase[x]++);
        }
 
-       pDemo->lm.applyGravity();
-       pDemo->lm.applyInertia();
-   }   
-   // draw the ground
-    pDemo->ground.draw(gout);
+       if (pDemo->x == true)
+       {
+           // move the ship around
+           if (pUI->isLeft()) {
+               pDemo->lm.angle += 0.1;
+               pDemo->lm.burnRotateFuel();
+           }
+           if (pUI->isRight()) {
+               pDemo->lm.angle -= 0.1;
+               pDemo->lm.burnRotateFuel();
+           }
+           if (pUI->isUp()) {
+               pDemo->lm.applyThrust();
+           }
 
-    // draw the lm and its flames
-    gout.drawLander(Point(pDemo->lm.x, pDemo->lm.y) /*position*/, pDemo->lm.angle /*angle*/);
-    gout.drawLanderFlames(Point(pDemo->lm.x, pDemo->lm.y), pDemo->lm.angle, /*angle*/
-        pUI->isUp(), pUI->isLeft(), pUI->isRight());
+           pDemo->lm.applyGravity();
+           pDemo->lm.applyInertia();
+       }
+
+       // draw the ground
+       pDemo->ground.draw(gout);
+
+       // draw the lm and its flames
+       gout.drawLander(Point(pDemo->lm.x, pDemo->lm.y) /*position*/, pDemo->lm.angle /*angle*/);
+       gout.drawLanderFlames(Point(pDemo->lm.x, pDemo->lm.y), pDemo->lm.angle, /*angle*/
+           pUI->isUp(), pUI->isLeft(), pUI->isRight());
+
+
+       // put some text on the screen
+       gout.setf(ios::fixed | ios::showpoint);
+       gout.precision(2);
+       gout.setPosition(Point(20.0, 370.0));
+       gout << "lm: " << pDemo->lm.fuel << " lbs\n";
+       gout << "Speed: " << pDemo->lm.totalVelocity() << " m/s\n";
+       gout << "Altitude: " << (int)pDemo->ground.getElevation(Point(pDemo->lm.x, pDemo->lm.y)) << " meters\n";
+       // 
+       if (pDemo->ground.hitGround(Point(pDemo->lm.x, pDemo->lm.y), LM_WIDTH)) {
+           gout.setPosition(Point(200, 200));
+           gout << "Crash!" << endl;
+           pDemo->x = false;
+
+       }
+       if (pDemo->ground.onPlatform(Point(pDemo->lm.x, pDemo->lm.y), LM_WIDTH)) {
+           gout.setPosition(Point(130, 200));
+           gout << "The Eagle has landed!" << endl;
+           pDemo->x = false;
+       }
    
-
-   // put some text on the screen
-   gout.setf(ios::fixed | ios::showpoint);
-   gout.precision(2);
-   gout.setPosition(Point(20.0, 370.0));
-   gout << "lm: " << pDemo->lm.fuel << " lbs\n";
-   gout << "Speed: " << pDemo->lm.totalVelocity()<< " m/s\n";
-   gout << "Altitude: " << (int)pDemo->ground.getElevation(Point(pDemo->lm.x, pDemo->lm.y)) << " meters\n";
-   // 
-   if (pDemo->ground.hitGround(Point(pDemo->lm.x, pDemo->lm.y), LM_WIDTH)) {
-       gout.setPosition(Point(200, 200));
-       gout << "Crash!" << endl;
-       pDemo->x = false;
-
-   }
-   if (pDemo->ground.onPlatform(Point(pDemo->lm.x, pDemo->lm.y), LM_WIDTH)) {
-       gout.setPosition(Point(130, 200));
-       gout << "The Eagle has landed!" << endl;
-       pDemo->x = false;
-   }
+   pDemo->frame++;
+    
 }
 
 /*********************************
@@ -132,7 +144,7 @@ int main(int argc, char ** argv)
    // Initialize OpenGL
    Point ptUpperRight(400.0, 400.0);
    Interface ui(0, NULL, 
-                "Lab 05", 
+                "Apollo", 
                  ptUpperRight);
    // Initialize the game class
    Demo demo(ptUpperRight);

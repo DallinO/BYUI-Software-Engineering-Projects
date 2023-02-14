@@ -3,7 +3,6 @@
 public class Scripture
 {
 
-
     private string _scripture = "";
     public List<Word> _wordList = new List<Word>();
     private Reference rfr;

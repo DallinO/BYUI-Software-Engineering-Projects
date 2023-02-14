@@ -1,4 +1,2 @@
-﻿  glDemo.cpp
-C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 230\Week 04\Lab 04\glDemo.cpp(103,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 230\Week 04\Lab 04\glDemo.cpp(109,66): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  Lab 04.vcxproj -> C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 230\Week 04\Lab 04\x64\Debug\Lab 04.exe
+﻿  fuel.cpp
+  Lab 04.vcxproj -> C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 230\Week 05\Lab 05\x64\Debug\Lab 04.exe

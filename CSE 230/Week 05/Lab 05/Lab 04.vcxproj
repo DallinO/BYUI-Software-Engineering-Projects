@@ -22,12 +22,20 @@
     <ClCompile Include="glDemo.cpp" />
     <ClCompile Include="ground.cpp" />
     <ClCompile Include="point.cpp" />
+    <ClCompile Include="lander.cpp" />
+    <ClCompile Include="thrust.cpp" />
+    <ClCompile Include="fuel.cpp" />
     <ClCompile Include="uiDraw.cpp" />
     <ClCompile Include="uiInteract.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ground.h" />
-    <ClInclude Include="lm.h" />
+    <ClInclude Include="fuel.h" />
+    <ClInclude Include="star.h" />
+    <ClInclude Include="velocity.h" />
+    <ClInclude Include="thrust.h" />
+    <ClInclude Include="acceleration.h" />
+    <ClInclude Include="lander.h" />
     <ClInclude Include="point.h" />
     <ClInclude Include="uiDraw.h" />
     <ClInclude Include="uiInteract.h" />
