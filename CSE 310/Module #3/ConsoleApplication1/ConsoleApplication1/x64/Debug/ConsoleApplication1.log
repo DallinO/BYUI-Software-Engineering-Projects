@@ -1,0 +1,3 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 310\Module #3\ConsoleApplication1\ConsoleApplication1\player.h(26,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  ConsoleApplication1.vcxproj -> C:\Users\offic\Documents\Software Engineering\BYUI-Software-Engineering-Projects\CSE 310\Module #3\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe

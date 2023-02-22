@@ -1,0 +1,15 @@
+TIE Fighter I
+TIE Fighter II
+TIE Fighter III
+TIE Fighter IV
+Republic Gunship I
+Republic Gunship II
+Republic Gunship III
+ARC Starfighter I
+ARC Starfighter II
+ARC Starfighter III
+X-Wing
+X-WIng II
+Vulture Droid
+Vulture Droid II
+Separtist Dropship

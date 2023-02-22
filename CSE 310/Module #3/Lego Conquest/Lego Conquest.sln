@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lego Conquest", "Lego Conquest\Lego Conquest.vcxproj", "{77C597AF-6EF2-4CB8-A2AB-C233F2739451}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77C597AF-6EF2-4CB8-A2AB-C233F2739451}.Debug|x64.ActiveCfg = Debug|x64
+		{77C597AF-6EF2-4CB8-A2AB-C233F2739451}.Debug|x64.Build.0 = Debug|x64
+		{77C597AF-6EF2-4CB8-A2AB-C233F2739451}.Debug|x86.ActiveCfg = Debug|Win32
+		{77C597AF-6EF2-4CB8-A2AB-C233F2739451}.Debug|x86.Build.0 = Debug|Win32
+		{77C597AF-6EF2-4CB8-A2AB-C233F2739451}.Release|x64.ActiveCfg = Release|x64
+		{77C597AF-6EF2-4CB8-A2AB-C233F2739451}.Release|x64.Build.0 = Release|x64
+		{77C597AF-6EF2-4CB8-A2AB-C233F2739451}.Release|x86.ActiveCfg = Release|Win32
+		{77C597AF-6EF2-4CB8-A2AB-C233F2739451}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {129CD71B-C381-4F10-AE5F-4F0B91DECE3A}
+	EndGlobalSection
+EndGlobal
