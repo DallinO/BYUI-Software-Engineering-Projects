@@ -6,54 +6,18 @@
 #include <string>
 #include "player.h"
 #include "color.h"
+#include "checknselect.h"
 #include <Windows.h>
 #pragma once
 
 using namespace std;
 
-class Attack {
-public:
+class Attack : CheckNSelect {
+private:
 	int targetPlayer;
 	int attackingUnit;
 	int targetUnit;
-	Color c;
-
-
-	/***************************************
-	* CHECK UNITS
-	***************************************/
-	bool CheckUnits(vector<Player>& players, int player) {
-		if (players[player].GetArmySize() == 0) {
-			system("cls");
-			cout << c.r + "No units available!" + c.e << endl;
-			Sleep(2000);
-			return false;
-		}
-		else
-			return true;
-	}
-
-
-	/***************************************
-	* SELECT UNIT
-	***************************************/
-	int SelectUnit(vector<Player>& players, int player) {
-		string unit;
-		int u = 1;
-		for (Actor actor : players[player].GetArmy()) {
-			cout << u << ") " << actor.GetName() << endl;
-			u++;
-		}
-		while (true) {
-			cin >> unit;
-			u = stoi(unit);
-			if (u > players[player].GetArmySize() || u < 1)
-				cout << c.r + "Out of option range!" + c.e;
-			else
-				return stoi(unit)-1;
-		}
-	}
-
+public:
 
 	/***************************************
 	* APPLY DAMAGE
@@ -78,8 +42,10 @@ public:
 			players[targetPlayer].GetArmy().erase(players[targetPlayer].GetArmy().begin() + (targetUnit - 1));
 
 		}
-
-		cout << players[player].GetArmy()[attackingUnit].GetName() << "attacked " << players[targetPlayer].GetArmy()[targetUnit].GetName() << endl;
+		
+		system("cls");
+		cout << c.r << players[player].GetArmy()[attackingUnit].GetName() << "attacked " << players[targetPlayer].GetArmy()[targetUnit].GetName() << c.e << endl;
+		Sleep(2000);
 	}
 
 	/***************************************

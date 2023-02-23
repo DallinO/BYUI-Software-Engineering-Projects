@@ -139,6 +139,8 @@
     <ClInclude Include="attack.h" />
     <ClInclude Include="buy.h" />
     <ClInclude Include="color.h" />
+    <ClInclude Include="checknselect.h" />
+    <ClInclude Include="move.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="officer.h" />
     <ClInclude Include="scout.h" />

@@ -13,6 +13,7 @@ public:
 	Heavy(string name) : Actor{name } {
 		health = 115;
 		movement = 2;
+		moveReset = 2;
 		minifigureDamage = 75;
 		vehicleDamage = 25;
 		aircraftDamage = NULL;

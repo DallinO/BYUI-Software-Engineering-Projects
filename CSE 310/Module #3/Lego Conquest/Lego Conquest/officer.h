@@ -13,6 +13,7 @@ public:
 	Officer(string name) : Actor{name} {
 		health = 200;
 		movement = 2;
+		moveReset = 2;
 		minifigureDamage = 150;
 		vehicleDamage = 50;
 		aircraftDamage = NULL;

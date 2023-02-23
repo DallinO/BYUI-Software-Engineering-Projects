@@ -9,6 +9,7 @@
 #include "player.h"
 #include "buy.h"
 #include "attack.h"
+#include "move.h"
 #include "color.h"
 
 
@@ -23,6 +24,7 @@ private:
 	Attack attack;
 	Buy buy;
 	Attack att;
+	Move move;
 	Color c;
 public:
 	void RunGame() {
@@ -85,8 +87,7 @@ public:
 							break;
 					}
 					if (a == 1)
-						continue;
-					//Move(i, players);
+						move.Action(i, players);
 					else if (a == 2)
 						att.Action(i, players, numPlayers);
 					else if (a == 3)
@@ -96,16 +97,9 @@ public:
 					else if (a == 5)
 						exit(0);
 				}
+				move.ResetMoves(i, players);
 			}
 			day++;
 		}
 	}
-
-	/***************************************
-	* MOVE
-	***************************************/
-	void Move(int user, vector<Player> players){}
-
-
-
 };

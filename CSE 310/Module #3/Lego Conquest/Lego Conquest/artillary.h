@@ -13,6 +13,7 @@ public:
 	Artillary(string name) : Actor{name} {
 		health = 225;
 		movement = 1;
+		moveReset = 1;
 		minifigureDamage = 100;
 		vehicleDamage = 75;
 		aircraftDamage = NULL;

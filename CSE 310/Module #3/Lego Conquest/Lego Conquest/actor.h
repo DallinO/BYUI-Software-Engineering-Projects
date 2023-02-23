@@ -15,6 +15,7 @@ protected:
 	string description;
 	int health;
 	int movement;
+	int moveReset;
 	int range;
 	bool isDead;
 	int cost;
@@ -36,7 +37,7 @@ public:
 	}
 
 	void MoveActor(int spaces)		{ movement -= spaces; }
-	void ResetMovement()			{}
+	void ResetMovement()			{ movement = moveReset; }
 	string GetName()				{ return name; }
 	string GetClass()				{ return klass; }
 	string GetType()				{ return type; }

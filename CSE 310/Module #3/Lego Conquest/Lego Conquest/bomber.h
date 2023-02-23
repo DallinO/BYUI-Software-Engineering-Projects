@@ -13,6 +13,7 @@ public:
 	Bomber(string name) : Actor{name} {
 		health = 250;
 		movement = 1;
+		moveReset = 1;
 		minifigureDamage = 100;
 		vehicleDamage = 100;
 		aircraftDamage = NULL;

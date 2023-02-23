@@ -13,6 +13,7 @@ public:
 	Armour(string name) : Actor{name} {
 		health = 150;
 		movement = 2;
+		moveReset = 2;
 		minifigureDamage = 100;
 		vehicleDamage = 75;
 		aircraftDamage = 50;

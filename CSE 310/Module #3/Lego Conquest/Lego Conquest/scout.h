@@ -13,6 +13,7 @@ public:
 	Scout(string name) : Actor{name } {
 		health = 75;
 		movement = 1;
+		moveReset = 1;
 		minifigureDamage = 150;
 		vehicleDamage;
 		aircraftDamage;
