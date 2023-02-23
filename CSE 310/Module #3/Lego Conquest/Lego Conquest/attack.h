@@ -6,13 +6,14 @@
 #include <string>
 #include "player.h"
 #include "color.h"
+#include <Windows.h>
 #pragma once
 
 using namespace std;
 
 class Attack {
 public:
-	int targetplayer;
+	int targetPlayer;
 	int attackingUnit;
 	int targetUnit;
 	Color c;
@@ -23,7 +24,9 @@ public:
 	***************************************/
 	bool CheckUnits(vector<Player>& players, int player) {
 		if (players[player].GetArmySize() == 0) {
-			cout << "No units to move!" << endl;
+			system("cls");
+			cout << c.r + "No units available!" + c.e << endl;
+			Sleep(2000);
 			return false;
 		}
 		else
@@ -53,6 +56,33 @@ public:
 
 
 	/***************************************
+	* APPLY DAMAGE
+	***************************************/
+	void ApplyDamage(int player, vector<Player>& players)
+	{
+		if (players[targetPlayer].GetArmy()[targetUnit].GetType() == "Minifigure") {
+			players[targetPlayer].GetArmy()[targetUnit].ApplyDamage(players[player].GetArmy()[attackingUnit].GetMinifigureDamage());
+		}
+		else if (players[targetPlayer].GetArmy()[targetUnit].GetType() == "Vehicle") {
+			players[targetPlayer].GetArmy()[targetUnit].ApplyDamage(players[player].GetArmy()[attackingUnit].GetVehicleDamage());
+		}
+		else if (players[targetPlayer].GetArmy()[targetUnit].GetType() == "Aircraft") {
+			players[targetPlayer].GetArmy()[targetUnit].ApplyDamage(players[player].GetArmy()[attackingUnit].GetAircraftDamage());
+		}
+
+		// Check if the target was killed
+		if (players[targetPlayer].GetArmy()[targetUnit].GetIsDead())
+		{
+			// Remove the killed unit from the target
+			// players army
+			players[targetPlayer].GetArmy().erase(players[targetPlayer].GetArmy().begin() + (targetUnit - 1));
+
+		}
+
+		cout << players[player].GetArmy()[attackingUnit].GetName() << "attacked " << players[targetPlayer].GetArmy()[targetUnit].GetName() << endl;
+	}
+
+	/***************************************
 	* ACTION
 	* Summary:
 	*	Facilitates all actions neccissary
@@ -63,7 +93,6 @@ public:
 		// Check if the attacking player has any units
 		if (CheckUnits(players, player)) {
 
-
 			// Select attacking unit
 			cout << "Select attacking unit: \n";
 			attackingUnit = SelectUnit(players, player);
@@ -73,48 +102,30 @@ public:
 			// the player to attack
 			if (numplayers > 2) {
 				cout << "Enter the player to attack: ";
-				cin >> targetplayer;
-
-
-				// Select target unit
-				cout << "Select unit to attack: \n";
-				targetUnit = SelectUnit(players, targetplayer);
+				cin >> targetPlayer;
+				if (CheckUnits(players, targetPlayer))	
+				{
+					// Select target unit
+					cout << "Select unit to attack: \n";
+					targetUnit = SelectUnit(players, targetPlayer);
+					ApplyDamage(player, players);
+				}
 			}
 
 			// If there are only two players than the target
 			// player is automatically selected
 			else {
 				if (player == 0)
-					targetplayer = 1;
-				if (player == 1)
-					targetplayer = 0;
-
-				// Select target unit
-				cout << "Select unit to attack: \n";
-				targetUnit = SelectUnit(players, targetplayer);
+					targetPlayer = 1;
+				else
+					targetPlayer = 0;
+				if (CheckUnits(players, targetPlayer)) {
+					// Select target unit
+					cout << "Select unit to attack: \n";
+					targetUnit = SelectUnit(players, targetPlayer);
+					ApplyDamage(player, players);
+				}
 			}
-
-			// Apply damage based on the target unit type
-			if (players[targetplayer].GetArmy()[targetUnit].GetType() == "Minifigure") {
-				players[targetplayer].GetArmy()[targetUnit].ApplyDamage(players[player].GetArmy()[attackingUnit].GetMinifigureDamage());
-			}
-			else if (players[targetplayer].GetArmy()[targetUnit].GetType() == "Vehicle") {
-				players[targetplayer].GetArmy()[targetUnit].ApplyDamage(players[player].GetArmy()[attackingUnit].GetVehicleDamage());
-			}
-			else if (players[targetplayer].GetArmy()[targetUnit].GetType() == "Aircraft") {
-				players[targetplayer].GetArmy()[targetUnit].ApplyDamage(players[player].GetArmy()[attackingUnit].GetAircraftDamage());
-			}
-
-			// Check if the target was killed
-			if (players[targetplayer].GetArmy()[targetUnit].GetIsDead())
-			{
-				// Remove the killed unit from the target
-				// players army
-				players[targetplayer].GetArmy().erase(players[targetplayer].GetArmy().begin() + (targetUnit - 1));
-
-			}
-		}
-
-		cout << players[player].GetArmy()[attackingUnit].GetName() << "attacked " << players[targetplayer].GetArmy()[targetUnit].GetName() << endl;
+		}	
 	}
 };
