@@ -1,24 +1,24 @@
 # Overview
 
-This project is design to test my basic understanding of Java syntax by creating a the "Snake" game. The program generaes a board and randomly places the snake body and apple. The user direscts the head of the snake to the apple, growing the body. The game ends when the user hits a wall or runs into its own body.
+The purpose of this project is to test my knowledge and skill in object oriented programming. This program was design to track the game data of a real life turn-based strategy game inspired from my siblings who love playing legos. The program tracks the each players health, credits and thier collection of units on the field. It also tracks each individual units health, movement, range, class, damage and so forth.
 
-[Software Demo Video](https://youtu.be/WFnBNEcQztU)
+[Software Demo Video](https://youtu.be/9Lo_kmGnajc)
 
 # Development Environment
 
-For this project I installed the Extention Pack for Java from the extensions window in Visual Code. I am using the Visual Code enviroment and the Java SE Development kit.
+I developed this program in Windows Studio. The program uses the terminal as the user interface.
 
 # Useful Websites
 
-- [Extention Pack for Java Link](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
-- [Java SE Development](https://www.oracle.com/java/technologies/downloads/)
-- [Python Snake Game](https://data-flair.training/blogs/snake-game-python-program/)
+- [Windows Studio Community](https://visualstudio.microsoft.com/vs/community/)
+- [Polymorphism In C++](https://www.w3schools.com/cpp/cpp_polymorphism.asp)
+- [Inheritence In C++](https://www.w3schools.com/cpp/cpp_inheritance.asp)
 
 # Future Work
 
 These are a couple things I would like to expand on in the future.
 
-- Add a score board.
-- Increase the size of the board and elements.
-- Add directional based body parts and head.
-- Add point pop up after apple consumption.
+- Create a an application to use as the graphical interface
+- Add a picture to display the selected unit.
+- Save all data to an external file to be reloaded.
+- Add better guards for invalid input.
