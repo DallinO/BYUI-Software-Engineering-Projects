@@ -39,12 +39,12 @@ public:
 		{
 			// Remove the killed unit from the target
 			// players army
-			players[targetPlayer].GetArmy().erase(players[targetPlayer].GetArmy().begin() + (targetUnit - 1));
+			players[targetPlayer].GetArmy().erase(players[targetPlayer].GetArmy().begin() + targetUnit);
 
 		}
 		
 		system("cls");
-		cout << c.r << players[player].GetArmy()[attackingUnit].GetName() << "attacked " << players[targetPlayer].GetArmy()[targetUnit].GetName() << c.e << endl;
+		cout << c.r << players[player].GetArmy()[attackingUnit].GetName() << " attacked " << players[targetPlayer].GetArmy()[targetUnit].GetName() << c.e << endl;
 		Sleep(2000);
 	}
 

@@ -64,27 +64,37 @@ public:
 			return true;
 	}
 
-
-	void Action(int player, vector<Player>& players) {
-		string type;
-		int t;
-		int klass;
-		bool transaction;
-		int id;
-		system("cls");
-		cout << "-----BUY-----\n";
-		cout << c.p + "TYPE:\n" + c.e; 
-		cout << "1) Minifigure\n"
-			"2) Vehicle\n"
-			"3) Aircraft\n";
+void GetInput(string& str, int& i, int max){
 		while (true) {
-			cout << c.y + ">>> "; cin >> type; cout << c.e;
-			t = stoi(type);
-			if (t < 0 || t > 3)
+			cout << c.y + ">>> "; cin >> i; cout << c.e;
+			//i = stoi(str);
+			if (i < 0 || i > max)
 				cout << c.r + "Out of option range!\n" + c.e;
 			else
 				break;
 		}
+	}
+
+
+	void Action(int player, vector<Player>& players) {
+
+		string type;
+		int t;
+		string klass;
+		int k;
+		bool transaction;
+		string num;
+		int n;
+
+		system("cls");
+		cout << "-----BUY-----\n";
+		cout << c.p + "TYPE:\n" + c.e; 
+		cout << "1) Minifigure\n"
+				"2) Vehicle\n"
+				"3) Aircraft\n";
+		GetInput(type, t, 3);
+
+		/*** MINIFIGURE ***/
 		if (t == 1) {
 			int i = 1;
 			for (string unit : minifigures) {
@@ -96,51 +106,59 @@ public:
 			}
 			cout << "\n\n";
 			cout << "Select minifiure: ";
-			cout << c.y + ">>> "; cin >> id; cout << endl;
+			GetInput(num, n, minifigures.size());
+
 			cout <<
 				c.c + "CLASS:\n" + c.e +
 				"1) Assualt		 75 CR\n" 
 				"2) Heavy		150 CR\n"
 				"3) Scout		300 CR\n"
 				"4) Officer		500 CR\n" << endl;
-			cin >> klass;
-			if (CheckFunds(player, players, minifigureCost[klass - 1])) {
-				players[player].AddUnit(minifigures, klass, id - 1);
-				players[player].RemoveCredits(minifigureCost[klass - 1]);
+			GetInput(klass, k, 4);
+
+			if (CheckFunds(player, players, minifigureCost[k - 1])) {
+				players[player].AddUnit(minifigures, k, n - 1);
+				players[player].RemoveCredits(minifigureCost[k - 1]);
 			}
 		}
+
+		/*** VEHICLE ***/
 		if (t == 2) {
 			for (int i = 0; i < vehicles.size(); i++) {
 				cout << i << ") " << vehicles[i] << endl;
 				Sleep(10);
 			}
+
 			cout << "Select Vehicle: ";
-			cout << c.y + ">>> "; cin >> id; cout << endl;
+			GetInput(num, n, vehicles.size());
 			cout <<
-				c.c + "CLASS:" + c.e +
-				"1) Armour		250 CR"
-				"2) Artillary	550 CR" << endl;
-			cin >> klass;
-			if (CheckFunds(player, players, vehicleCost[klass - 1])) {
-				players[player].AddUnit(vehicles, klass, id - 1);
-				players[player].RemoveCredits(minifigureCost[klass - 1]);
+				c.c + "CLASS:\n" + c.e +
+				"1) Armour		250 CR\n"
+				"2) Artillary	550 CR\n" << endl;
+			GetInput(klass, k, 2);
+			if (CheckFunds(player, players, vehicleCost[k - 1])) {
+				players[player].AddUnit(vehicles, k, n - 1);
+				players[player].RemoveCredits(minifigureCost[k - 1]);
 			}
 		}
+
+		/*** AIRCRAFT ***/
 		if (t == 3) {
 			for (int i = 0; i < aircraft.size(); i++) {
 				cout << i << ") " << aircraft[i] << endl;
 				Sleep(10);
 			}
+
 			cout << "Select Aircraft: ";
-			cout << c.y + ">>> "; cin >> id; cout << endl;
+			GetInput(num, n, aircraft.size());
 			cout <<
 				c.c + "CLASS:\n" + c.e +
 				"1) Fighter		250 CR\n"
 				"2) Bomber		600 CR\n" << endl;
-			cin >> klass;
-			if (CheckFunds(player, players, aircraftCost[klass - 1])) {
-				players[player].AddUnit(aircraft, klass, id - 1);
-				players[player].RemoveCredits(minifigureCost[klass - 1]);
+			GetInput(klass, k, 2);
+			if (CheckFunds(player, players, aircraftCost[k - 1])) {
+				players[player].AddUnit(aircraft, k, n - 1);
+				players[player].RemoveCredits(minifigureCost[k - 1]);
 			}
 		}
 	}

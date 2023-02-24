@@ -20,7 +20,7 @@ private:
 public:
 
 	void ResetMoves(int player, vector<Player>& players) {
-		for (Actor unit : players[player].GetArmy())
+		for (Actor& unit : players[player].GetArmy())
 			unit.ResetMovement();
 	}
 

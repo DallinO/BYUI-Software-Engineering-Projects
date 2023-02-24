@@ -1,1 +1,7 @@
-﻿  Lego Conquest.vcxproj -> C:\Users\offic\Documents\GitHub\BYUI-Software-Engineering-Projects\CSE 310\Module #3\Lego Conquest\x64\Debug\Lego Conquest.exe
+﻿  program.cpp
+C:\Users\offic\Documents\GitHub\BYUI-Software-Engineering-Projects\CSE 310\Module #3\Lego Conquest\Lego Conquest\player.h(37): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\offic\Documents\GitHub\BYUI-Software-Engineering-Projects\CSE 310\Module #3\Lego Conquest\Lego Conquest\buy.h(109,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\offic\Documents\GitHub\BYUI-Software-Engineering-Projects\CSE 310\Module #3\Lego Conquest\Lego Conquest\buy.h(133,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\offic\Documents\GitHub\BYUI-Software-Engineering-Projects\CSE 310\Module #3\Lego Conquest\Lego Conquest\buy.h(153,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\offic\Documents\GitHub\BYUI-Software-Engineering-Projects\CSE 310\Module #3\Lego Conquest\Lego Conquest\buy.h(85,8): warning C4101: 'transaction': unreferenced local variable
+  Lego Conquest.vcxproj -> C:\Users\offic\Documents\GitHub\BYUI-Software-Engineering-Projects\CSE 310\Module #3\Lego Conquest\x64\Debug\Lego Conquest.exe

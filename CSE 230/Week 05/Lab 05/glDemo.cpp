@@ -18,7 +18,7 @@
 using namespace std;
 
 /*************************************************************************
- * Demo
+ * CLASS Demo
  * Test structure to capture the LM that will move around the screen
  *************************************************************************/
 class Demo
@@ -38,9 +38,9 @@ public:
    }
 
    // this is just for test purposes.  Don't make member variables public!        
-   Point ptUpperRight;   // size of the screen
-   double angle;         // angle the LM is pointing
-   unsigned char phase[50];  // phase of the star's blinking
+   Point ptUpperRight;          // size of the screen
+   double angle;                // angle the LM is pointing
+   unsigned char phase[50];     // phase of the star's blinking
    Ground ground;
    Point ptStar[50];
    Lander lm;
